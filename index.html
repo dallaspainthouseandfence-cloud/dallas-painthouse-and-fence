@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dallas Paint House & Fence | DFW Painting</title>
+
+  <meta name="description" content="Dallas Paint House & Fence provides professional interior, exterior, and fence painting services throughout the DFW area.">
+
+  
+
+  <style>
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+    body {
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      color: #17202a;
+
+      background: #f7f7f5;
+
+      line-height: 1.6;
+
+    }
+
+    header {
+
+      background: #111;
+
+      color: white;
+
+      padding: 18px 6%;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+
+    }
+
+    .logo {
+
+      font-size: 20px;
+
+      font-weight: 800;
+
+      letter-spacing: .5px;
+
+    }
+
+    nav a {
+
+      color: white;
+
+      text-decoration: none;
+
+      margin-left: 22px;
+
+      font-weight: 600;
+
+    }
+
+    .hero {
+
+      min-height: 78vh;
+
+      display: flex;
+
+      align-items: center;
+
+      padding: 70px 7%;
+
+      background:
+
+        linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.68)),
+
+        linear-gradient(135deg, #263238, #777);
+
+      color: white;
+
+    }
+
+    .hero-content {
+
+      max-width: 850px;
+
+    }
+
+    .hero h1 {
+
+      font-size: clamp(42px, 8vw, 78px);
+
+      line-height: 1;
+
+      margin-bottom: 25px;
+
+      text-transform: uppercase;
+
+    }
+
+    .hero h1 span {
+
+      display: block;
+
+    }
+
+    .hero p {
+
+      font-size: 21px;
+
+      max-width: 650px;
+
+      margin-bottom: 32px;
+
+      color: #eee;
+
+    }
+
+    .buttons {
+
+      display: flex;
+
+      gap: 15px;
+
+      flex-wrap: wrap;
+
+    }
+
+    .btn {
+
+      display: inline-block;
+
+      padding: 15px 25px;
+
+      border-radius: 6px;
+
+      text-decoration: none;
+
+      font-weight: 800;
+
+      font-size: 16px;
+
+    }
+
+    .btn-primary {
+
+      background: #e0a400;
+
+      color: #111;
+
+    }
+
+    .btn-secondary {
+
+      border: 2px solid white;
+
+      color: white;
+
+    }
+
+    section {
+
+      padding: 75px 7%;
+
+    }
+
+    .section-title {
+
+      text-align: center;
+
+      margin-bottom: 45px;
+
+    }
+
+    .section-title h2 {
+
+      font-size: 40px;
+
+      margin-bottom: 10px;
+
+    }
+
+    .section-title p {
+
+      color: #666;
+
+      max-width: 650px;
+
+      margin: auto;
+
+    }
+
+    .services {
+
+      background: white;
+
+    }
+
+    .service-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 22px;
+
+    }
+
+    .card {
+
+      background: #f5f5f3;
+
+      padding: 30px;
+
+      border-radius: 12px;
+
+      border: 1px solid #e3e3e3;
+
+    }
+
+    .card .icon {
+
+      font-size: 38px;
+
+      margin-bottom: 12px;
+
+    }
+
+    .card h3 {
+
+      font-size: 23px;
+
+      margin-bottom: 10px;
+
+    }
+
+    .card p {
+
+      color: #666;
+
+    }
+
+    .about {
+
+      background: #171717;
+
+      color: white;
+
+    }
+
+    .about-content {
+
+      max-width: 900px;
+
+      margin: auto;
+
+      text-align: center;
+
+    }
+
+    .about h2 {
+
+      font-size: 42px;
+
+      margin-bottom: 20px;
+
+    }
+
+    .about p {
+
+      color: #ddd;
+
+      font-size: 18px;
+
+    }
+
+    .projects {
+
+      background: #f7f7f5;
+
+    }
+
+    .project-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+
+    }
+
+    .project {
+
+      height: 260px;
+
+      border-radius: 12px;
+
+      background: linear-gradient(135deg, #333, #999);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: white;
+
+      font-size: 20px;
+
+      font-weight: 700;
+
+      text-align: center;
+
+      padding: 20px;
+
+    }
+
+    .estimate {
+
+      background: #e0a400;
+
+      text-align: center;
+
+    }
+
+    .estimate h2 {
+
+      font-size: 43px;
+
+      margin-bottom: 15px;
+
+    }
+
+    .estimate p {
+
+      font-size: 19px;
+
+      margin-bottom: 25px;
+
+    }
+
+    .estimate .btn {
+
+      background: #111;
+
+      color: white;
+
+    }
+
+    .contact {
+
+      background: white;
+
+      text-align: center;
+
+    }
+
+    .contact h2 {
+
+      font-size: 40px;
+
+      margin-bottom: 20px;
+
+    }
+
+    .contact-info {
+
+      font-size: 20px;
+
+      margin: 12px 0;
+
+    }
+
+    footer {
+
+      background: #111;
+
+      color: #aaa;
+
+      text-align: center;
+
+      padding: 30px 20px;
+
+    }
+
+    footer strong {
+
+      color: white;
+
+    }
+
+    @media (max-width: 800px) {
+
+      header {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+      }
+
+      nav a {
+
+        margin: 0 7px;
+
+        font-size: 14px;
+
+      }
+
+      .hero {
+
+        min-height: 70vh;
+
+        padding: 60px 6%;
+
+      }
+
+      .service-grid,
+
+      .project-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      section {
+
+        padding: 60px 6%;
+
+      }
+
+      .hero p {
+
+        font-size: 18px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">DALLAS PAINT HOUSE & FENCE</div>
+
+  <nav>
+
+    <a href="#services">Services</a>
+
+    <a href="#projects">Our Work</a>
+
+    <a href="#contact">Contact</a>
+
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>
+
+      Professional
+
+      <span>Painting.</span>
+
+      <span>Built to Last.</span>
+
+    </h1>
+
+    <p>
+
+      Quality house painting and fence services for homeowners
+
+      throughout the Dallas–Fort Worth area.
+
+    </p>
+
+    <div class="buttons">
+
+      <a class="btn btn-primary" href="#contact">GET A FREE ESTIMATE</a>
+
+      <a class="btn btn-secondary" href="#services">VIEW SERVICES</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="services" id="services">
+
+  <div class="section-title">
+
+    <h2>Our Services</h2>
+
+    <p>
+
+      Professional preparation, painting and finishing for your home
+
+      and property.
+
+    </p>
+
+  </div>
+
+  <div class="service-grid">
+
+    <div class="card">
+
+      <div class="icon">🏠</div>
+
+      <h3>Exterior Painting</h3>
+
+      <p>
+
+        Give your home a fresh, clean look with professional exterior
+
+        painting and detailed preparation.
+
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">🖌️</div>
+
+      <h3>Interior Painting</h3>
+
+      <p>
+
+        Transform your rooms with clean lines, quality finishes and
+
+        professional attention to detail.
+
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">🪵</div>
+
+      <h3>Fence Painting & Staining</h3>
+
+      <p>
+
+        Protect and refresh your fence with professional painting,
+
+        staining and preparation.
+
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">✨</div>
+
+      <h3>Prep & Repairs</h3>
+
+      <p>
+
+        Proper preparation is the foundation of a great paint job.
+
+        We take care of the details before painting.
+
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">🏡</div>
+
+      <h3>Residential Painting</h3>
+
+      <p>
+
+        Professional painting services designed around your home,
+
+        schedule and project.
+
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">💯</div>
+
+      <h3>Quality Work</h3>
+
+      <p>
+
+        We focus on clean workmanship, careful preparation and a
+
+        finished product you can be proud of.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="about">
+
+  <div class="about-content">
+
+    <h2>Local. Professional. Reliable.</h2>
+
+    <p>
+
+      Dallas Paint House & Fence is focused on delivering quality
+
+      painting services to homeowners across the DFW area. From
+
+      preparation to the final coat, we treat every project with
+
+      attention to detail.
+
+    </p>
+
+  </div>
+
+</section>
+
+<section class="projects" id="projects">
+
+  <div class="section-title">
+
+    <h2>Our Work</h2>
+
+    <p>
+
+      We'll add photos of your actual painting projects here.
+
+    </p>
+
+  </div>
+
+  <div class="project-grid">
+
+    <div class="project">YOUR PROJECT PHOTO</div>
+
+    <div class="project">YOUR PROJECT PHOTO</div>
+
+    <div class="project">YOUR PROJECT PHOTO</div>
+
+    <div class="project">BEFORE & AFTER</div>
+
+    <div class="project">FENCE PROJECT</div>
+
+    <div class="project">HOUSE PROJECT</div>
+
+  </div>
+
+</section>
+
+<section class="estimate">
+
+  <h2>Ready to Transform Your Property?</h2>
+
+  <p>
+
+    Contact Dallas Paint House & Fence today for a free estimate.
+
+  </p>
+
+  <a class="btn" href="#contact">REQUEST A FREE ESTIMATE</a>
+
+</section>
+
+<section class="contact" id="contact">
+
+  <h2>Let's Talk About Your Project</h2>
+
+  <p class="contact-info">
+
+    📍 Serving the Dallas–Fort Worth Area
+
+  </p>
+
+  <p class="contact-info">
+
+    📞 <strong>YOUR PHONE NUMBER</strong>
+
+  </p>
+
+  <p class="contact-info">
+
+    ✉️ <strong>YOUR EMAIL</strong>
+
+  </p>
+
+  <br>
+
+  <a class="btn btn-primary" href="mailto:YOUR-EMAIL-HERE">
+
+    EMAIL US FOR A FREE ESTIMATE
+
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+
+    © 2026 <strong>Dallas Paint House & Fence</strong>.
+
+    All rights reserved.
+
+  </p>
+
+</footer>
+
+</body>
+
+</html>
